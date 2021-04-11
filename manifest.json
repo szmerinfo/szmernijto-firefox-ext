@@ -1,0 +1,32 @@
+{
+  "description": "With this extension you can publish any URL on the lemmy instance - szmer.info!",
+  "manifest_version": 2,
+  "name": "Sz(me)rnijTo",
+  "version": "1.0",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button",
+
+  "icons": {
+    "48": "images/szmer48.png"
+  },
+
+  "permissions": [
+    "tabs",
+    "storage",
+    "<all_urls>"
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "browser_action": {
+    "default_icon": "images/szmer32.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://szmer.info/create_post"],
+      "js": ["fill.js"]
+    }
+  ]
+}
