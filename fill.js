@@ -12,10 +12,6 @@ browser.storage.local.get('previous_tab_data').then(({ previous_tab_data }) => {
       el_title.value = data && data.title ? data.title : previous_tab_data.title;
       el_title.dispatchEvent(new Event('input', { 'bubbles': true, 'cancelable': true }));
       
-      const el_description = document.querySelector('[id^="comment-textarea-"]');
-      el_description.value = data && data.description ? data.description : '';
-      el_description.dispatchEvent(new Event('input', { 'bubbles': true, 'cancelable': true }));
-      
       browser.storage.local.remove("previous_tab_data");
     });
   }
