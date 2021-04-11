@@ -4,6 +4,29 @@ Wtyczka została stworzona do szybszego publikowania treści na instancji lemmie
 
 Do uruchomienia potrzebna jest przeglądarka oparta firefox w wersji przynajmniej 87.
 
+## Budowanie
+
+Do zbudowania wtyczki potrzebny jest lib web-ext, który można zainstalować przez npm. 
+Wymagany jest do tego node minimum 10.
+
+```text
+npm install -g web-ext
+```
+
+Następnie w folderze, w którym znajdują się pliki wtyczki
+
+```text
+web-ext build --artifacts-dir=dist --overwrite-dest
+```
+
+## Development
+
+Wtyczkę można uruchomoć w trybie developerskim przy pomocy web-ext, wszelkie zmiany zostaną automatycznie zainstalowane.
+
+```text
+web-ext run
+```
+
 ## Instalacja
 
 1. Pobierz [zip](https://github.com/szmerinfo/szmernijto-firefox-ext/archive/refs/heads/main.zip) z plikami wtyczki
