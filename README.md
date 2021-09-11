@@ -40,4 +40,4 @@ web-ext run
 Wtyczka nie zbiera żadnych informacji o użytkowniku, jej podstawową funkcją jest przekierowanie ze strony,
 którą chcemy się podzielić na stronę szmer.info i uzupełnienie formularza dodawania nowego postu.
 
-Wtyczka wykorzystuje api szmer.info (iframely) do pobrania informacji o stronie szerowanej.
+Wtyczka wykorzystuje api szmer.info do pobrania informacji o stronie szerowanej.

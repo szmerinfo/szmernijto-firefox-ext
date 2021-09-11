@@ -1,6 +1,6 @@
 browser.storage.local.get('previous_tab_data').then(({ previous_tab_data }) => {
   if (window.location.href.includes('szmer.info/create_post') && previous_tab_data) {
-    fetch(`https://szmer.info/iframely/oembed?url=${previous_tab_data.url}`).then(e => {
+    fetch(`https://szmer.info/api/v3/post/site_metadata?url=${previous_tab_data.url}`).then(e => {
       if (e.status === 200) return e.json();
       return false;
     }).then(data => {
